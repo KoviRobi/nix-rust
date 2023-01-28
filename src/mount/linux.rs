@@ -3,6 +3,8 @@ use libc::{self, c_ulong, c_int};
 use crate::{Result, NixPath};
 use crate::errno::Errno;
 
+pub mod mntent;
+
 libc_bitflags!(
     pub struct MsFlags: c_ulong {
         /// Mount read-only
